@@ -1,0 +1,16 @@
+@import "/home/guz/.config/eww/vars.scss";
+
+@import "/home/guz/.config/eww/widgets/date.scss";
+@import "/home/guz/.config/eww/widgets/active-window.scss";
+@import "/home/guz/.config/eww/widgets/sidestuff.scss";
+
+.bar {
+    font-weight: 500;
+    font-family: 'Fira Code';
+
+    margin: 5px 10px;
+    margin-bottom: 0px;
+    padding: 6px 12px;
+    
+    @include box-style;
+}

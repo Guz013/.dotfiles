@@ -1,0 +1,13 @@
+
+$color-accent: #88C0D0;
+$color-foreground: rgba(#181818, 1);
+$color-background: rgba(#111111, 1);
+
+$shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+$border-radius: 5px;
+
+@mixin box-style {
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    background-color: $color-background;
+}

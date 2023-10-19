@@ -1,0 +1,44 @@
+(defwidget metric [label value-text value onchange onclick]
+  (box :orientation "h"
+    :class "metric"
+    :space-evenly false
+    (box
+      :class "value"
+      :orientation "v"
+      :space-evenly false
+      (button
+        :onclick onclick
+        (box
+          :class "value-label"
+          :orientation "h"
+          :space-evenly false
+          (label :class "text-label" :text "${label}")
+          (label :class "text-value" :text "${value-text}")
+        ))
+      (scale :min 0
+        :max 101
+        :active {onchange != ""}
+        :value value
+      :onchange onchange))))
+
+(defwidget metric-minimal [label value-text value onchange onclick]
+  (box :orientation "h"
+    :class "metric"
+    :space-evenly false
+    (box
+      :class "value"
+      :orientation "h"
+      :space-evenly false
+      (button
+        :onclick onclick
+        (box
+          :class "value-label"
+          :orientation "h"
+          :space-evenly false
+          (label :class "text-label" :text "${label}")
+        ))
+      (scale :min 0
+        :max 101
+        :active {onchange != ""}
+        :value value
+      :onchange onchange))))

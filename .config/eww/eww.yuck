@@ -1,0 +1,9 @@
+(include "/home/guz/.config/eww/widgets/metric.yuck")
+(include "/home/guz/.config/eww/widgets/date.yuck")
+(include "/home/guz/.config/eww/widgets/active-window.yuck")
+(include "/home/guz/.config/eww/widgets/sidestuff.yuck")
+
+(defwidget empty [] "")
+
+(include "/home/guz/.config/eww/windows/bar-coding.yuck")
+(include "/home/guz/.config/eww/windows/bar-neutral.yuck")

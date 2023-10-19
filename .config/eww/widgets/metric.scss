@@ -1,0 +1,34 @@
+@import "/home/guz/.config/eww/vars.scss";
+
+.metric {
+    font-weight: normal;
+
+    .value {
+
+        .value-label label {
+            margin-left: 12px;
+
+            &.text-value {
+                font-size: smaller;
+            }
+        }
+
+        scale trough {
+            all: unset;
+            background-color: $color-foreground;
+            border-radius: 50px;
+            padding-top: 2px;
+            min-height: 3px;
+            min-width: 65px;
+            margin-left: 10px;
+            margin-right: 20px;
+            margin-top: 0;
+
+            highlight {
+                all: unset;
+                background-color: $color-accent;
+                border-radius: 10px;
+            }
+        }
+    }
+}

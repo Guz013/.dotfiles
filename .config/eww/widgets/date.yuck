@@ -1,0 +1,19 @@
+(include "/home/guz/.config/eww/widgets/calendar.yuck")
+
+(defvar cal_reveal false)
+
+(defpoll week-day :interval "10s"
+"date '+%a'")
+(defpoll time :interval "10s"
+"date '+%H:%M'")
+(defpoll day :interval "10s"
+"date '+%b %d'")
+(defpoll year :interval "10s"
+"date '+%y'")
+
+(defwidget date []
+  (eventbox
+    ; :onhover "eww open calendar"
+    ; :onhoverlost "eww close calendar"
+    (box :class "date" :orientation "h" :halign "start"
+    "󰥔  ${week-day} - ${day}, 12.0${year} - ${time} ")))

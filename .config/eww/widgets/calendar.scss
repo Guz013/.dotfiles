@@ -1,0 +1,16 @@
+@import "/home/guz/.config/eww/vars.scss";
+
+.cal-wrapper {
+
+    padding: 6px 11px;
+
+    .calendar {
+
+        color: $color-accent;
+        font-family: 'Fira Code';
+        font-weight: 500;
+        padding: 6px 11px;
+
+        @include box-style;
+    }
+}

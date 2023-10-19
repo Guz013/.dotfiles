@@ -1,0 +1,55 @@
+
+(defvar time_rev false)
+
+(defpoll volume :interval "1s"
+"bash /home/guz/.config/eww/scripts/volume.sh get")
+(defpoll volume-label :interval "1s"
+"bash /home/guz/.config/eww/scripts/volume.sh label")
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (metric :label volume-label
+      :value volume
+      :value-text "${volume}.00%"
+      :onchange "bash /home/guz/.config/eww/scripts/volume.sh set {}"
+    :onclick "pulsemixer --toggle-mute")
+    (metric :label ""
+      :value {EWW_RAM.used_mem_perc}
+      :value-text "${round(EWW_RAM.used_mem_perc, 2)}%"
+      :onchange ""
+    :onclick "hyprctl dispatch exec -- alacritty -e htop -t")
+    (metric :label ""
+      :value "${round(EWW_CPU.avg, 0)}"
+      :value-text "${round(EWW_CPU.avg, 2)}%"
+      :onchange ""
+    :onclick "hyprctl dispatch exec -- alacritty -e htop -t")
+    (metric :label "󰨣"
+      :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+      :value-text "${round(EWW_DISK["/"].used_perc, 2)}%"
+      :onchange ""
+    :onclick "")
+  ))
+
+(defwidget sidestuff-minimal []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (metric-minimal :label volume-label
+      :value volume
+      :value-text "${volume}.00%"
+      :onchange "bash /home/guz/.config/eww/scripts/volume.sh set {}"
+    :onclick "pulsemixer --toggle-mute")
+    (metric-minimal :label ""
+      :value {EWW_RAM.used_mem_perc}
+      :value-text "${round(EWW_RAM.used_mem_perc, 2)}%"
+      :onchange ""
+    :onclick "hyprctl dispatch exec -- alacritty -e htop -t")
+    (metric-minimal :label ""
+      :value "${round(EWW_CPU.avg, 0)}"
+      :value-text "${round(EWW_CPU.avg, 2)}%"
+      :onchange ""
+    :onclick "hyprctl dispatch exec -- alacritty -e htop -t")
+    (metric-minimal :label "󰨣"
+      :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+      :value-text "${round(EWW_DISK["/"].used_perc, 2)}%"
+      :onchange ""
+    :onclick "")
+  ))

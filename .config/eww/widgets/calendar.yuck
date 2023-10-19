@@ -1,0 +1,25 @@
+(defpoll calendar_day :interval "20h" "date '+%d'")
+(defpoll calendar_month :interval "20h" "date '+%m'")
+(defpoll calendar_year :interval "20h" "date '+%Y'")
+
+(defwindow calendar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+    :y "0%"
+    :width "10%"
+    :height "5px"
+  :anchor "top left")
+  :reserve (struts :side "top" :distance "4%")
+  :exclusive "false"
+  :stacking "fg"
+  (eventbox
+    ; :onhover "eww open calendar"
+    :onhoverlost "eww close calendar"
+    (box :class "cal-wrapper"
+      (box :class "calendar" :orientation "v"
+        (calendar
+          :day calendar_day
+          :month calendar_month
+          :year calendar_year
+        )))))
