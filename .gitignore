@@ -2,3 +2,5 @@
 .my-env/temp.txt
 .my-env/environments/states/*
 !.my-env/environments/states/_states.txt
+
+**/*.env
