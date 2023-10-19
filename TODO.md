@@ -25,3 +25,7 @@
     - [ ] Open last blog post and/or markdown file in [Obsidian](https://obsidian.md/)
 
 - [ ] Music themes: Start a playlist for each mode
+- [ ] Draw custom wallpapers
+- [ ] Improve repo
+  - [ ] Add screenshots
+  - [ ] Add list of dependencies/packages used
