@@ -13,7 +13,7 @@ function open_neutral() {
     if [[ "$main_terminal" -le "0" ]]; then
         hyprctl 'dispatch exec [workspace index2 silent] webcord'
     fi
-    sleep 1
+    sleep 2
     hyprctl "dispatch movetoworkspacesilent index2,pid:$webcord"
 
     local obsidian="$(get_window_pid_by_str "class: obsidian" 8)"
