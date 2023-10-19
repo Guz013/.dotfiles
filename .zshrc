@@ -67,7 +67,7 @@ rehash_precmd() {
 
 add-zsh-hook -Uz precmd rehash_precmd
 
-source $HOME/.profile
+# source $HOME/.profile
 
 # omz
 alias zshconfig="geany ~/.zshrc"
