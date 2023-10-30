@@ -3,4 +3,6 @@
 .my-env/environments/states/*
 !.my-env/environments/states/_states.txt
 
+.config/mpd/database
+
 **/*.env
