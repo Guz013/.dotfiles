@@ -8,6 +8,10 @@
     </li>
     <li><b>wm:</b> <a href="https://hyprland.org/">hyprland</a></li>
     <li><b>term:</b> <a href="https://alacritty.org/">alacritty</a></li>
+    <li>
+        <b>editor:</b> <a href="https://neovim.io/">neovim</a><br/>
+        <sup>(<a href="https://codeberg.org/Guz013/.nvim">.config/nvim</a>)</sup>
+    </li>
     <li><b>bar:</b> <a href="https://github.com/elkowar/eww">eww</a></li>
     <li><b>browser:</b> <a href="https://librewolf.net/">librewolf</a></li>
 </ul></samp>
