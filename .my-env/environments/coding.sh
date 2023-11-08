@@ -13,12 +13,12 @@ function open_coding() {
 	hyprctl keyword source "$HOME/.my-env/environments/coding_hyprland.conf"
 
 	# Start softwares
-	hyprctl --batch 'dispatch workspace 1; dispatch exec [workspace 1] alacritty --class neovim-instance -e nvim; dispatch workspace 4'
+	hyprctl --batch 'dispatch workspace 1; dispatch exec [workspace 1] alacritty --class neovim-instance -e tmux; dispatch workspace 4'
 	hyprctl --batch 'dispatch exec [workspace 5 silent] librewolf -P code-profile; dispatch exec [workspace 6 silent] dbus-run-session webcord'
 
 	sleep 1L
 	# local webcord="$(get_window_pid_by_str "class: WebCord" 8)"
-    # hyprctl "dispatch movetoworkspacesilent 6,pid:$webcord"
+	# hyprctl "dispatch movetoworkspacesilent 6,pid:$webcord"
 
 	# Read last session state
 	local last_browser="$(get_state "coding_last_dev_browser")"
