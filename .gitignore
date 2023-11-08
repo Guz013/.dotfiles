@@ -5,4 +5,7 @@
 
 .config/mpd/database
 
+.config/tmux/plugins/*
+!.config/tmux/plugins/tpm
+
 **/*.env
