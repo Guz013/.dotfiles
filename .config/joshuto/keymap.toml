@@ -1,0 +1,6 @@
+
+[default_view]
+keymap = [
+	{ keys = [ "tab" ], command = "tab_switch 1" },
+	{ keys = [ "backtab" ], command = "tab_switch -1" },
+]
