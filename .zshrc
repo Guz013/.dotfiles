@@ -67,6 +67,7 @@ rehash_precmd() {
 
 add-zsh-hook -Uz precmd rehash_precmd
 
+
 # source $HOME/.profile
 
 # omz
@@ -92,13 +93,14 @@ alias gp='git push origin master'
 alias vim='nvim'
 alias vi='nvim'
 
+####### My env
 # menu launcher, open-apps = opps
-alias opps='bash ~/.my-env/commands/opps.sh'
+alias opps="bash $HOME/.my-env/commands/opps.sh"
 
-# my env
-alias mode='bash ~/.my-env/env.sh'
-alias myenv='bash ~/.my-env/env.sh'
-alias m='bash ~/.my-env/env.sh'
+# Env mode
+alias mode="bash $HOME/.my-env/env.sh"
+alias myenv="bash $HOME/.my-env/env.sh"
+alias m="bash $HOME/.my-env/env.sh"
 
 if [[ "$(cat "$HOME/.my-env/env.txt")" == "neutral" ]]; then
   source $HOME/.my-env/environments/neutral_zsh.zsh
@@ -109,3 +111,26 @@ fi
 # Pomodoro timer
 alias pomo="bash $HOME/.my-env/apps/pomodoro.sh";
 alias p="bash $HOME/.my-env/apps/pomodoro.sh";
+
+########
+
+source /usr/share/nvm/init-nvm.sh
+
+# bun completions
+[ -s "/home/guz/.bun/_bun" ] && source "/home/guz/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bum
+export BUM_INSTALL="$HOME/.bum"
+export PATH="$BUM_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/guz/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
