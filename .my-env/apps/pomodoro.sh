@@ -1,11 +1,14 @@
 #!/usr/bin/env zsh
 
+# Pomodoro timer written in Bash
+# Inspired by Bashbunni's pomodoro timer:
+# https://gist.github.com/bashbunni/3880e4194e3f800c4c494de286ebc1d7
+
 source "$HOME/.my-env/_hyprland_utils.sh"
 
 declare -A pomo_options
-pomo_options["work"]="5s"
+pomo_options["work"]="50m"
 pomo_options["break"]="10m"
-
 
 function pomotimer() {
   local time="$1"
