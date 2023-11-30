@@ -94,6 +94,10 @@ alias vim='nvim'
 alias vi='nvim'
 
 ####### My env
+# Notification with sound
+alias notify="bash $HOME/.my-env/commands/notify.sh"
+alias notify-send="bash $HOME/.my-env/commands/notify.sh"
+
 # menu launcher, open-apps = opps
 alias opps="bash $HOME/.my-env/commands/opps.sh"
 
