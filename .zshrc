@@ -105,3 +105,7 @@ if [[ "$(cat "$HOME/.my-env/env.txt")" == "neutral" ]]; then
 elif [[ "$(cat "$HOME/.my-env/env.txt")" == "coding" ]]; then
   source $HOME/.my-env/environments/coding_zsh.zsh
 fi
+
+# Pomodoro timer
+alias pomo="bash $HOME/.my-env/apps/pomodoro.sh";
+alias p="bash $HOME/.my-env/apps/pomodoro.sh";
