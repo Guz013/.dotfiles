@@ -120,6 +120,12 @@ alias p="bash $HOME/.my-env/apps/pomodoro.sh";
 
 source /usr/share/nvm/init-nvm.sh
 
+# Android studio
+export JAVA_HOME="/opt/android-studio/jbr"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/26.1.10909125"
+export CAPACITOR_ANDROID_STUDIO_PATH="/usr/bin/android-studio"
+
 # bun completions
 [ -s "/home/guz/.bun/_bun" ] && source "/home/guz/.bun/_bun"
 
